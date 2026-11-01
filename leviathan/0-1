@@ -1,0 +1,12 @@
+# Leviathan 0 - 1
+
+## Observations
+theres a hidden dir (.backup)
+
+## plan 
+I need to grep through the data to maybe find password
+
+## What worked
+cat bookmarks.html | grep password >>> printed the whole text file, searched through it to find the word "password"
+
+## PW PiXaSWQqHq

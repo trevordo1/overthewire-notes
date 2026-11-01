@@ -1,0 +1,19 @@
+# 1-2
+
+## Observations
+theres an executable file (check)
+It asks for a password taht I dont have
+It must be comparing the input to something, now I have to find that something
+
+## Plan 
+I can use the ltrace command to find where it is searching to compare my input
+
+## What worked
+RUN ltrace ./check
+ ltrace ./check                                                            __libc_start_main(["./check"] <unfinished ...>                                                    printf("password: ")                                        = 10                                  getchar(0xf7fc5320, 0xf7fc3000, 0x786573, 0x646f67password: s                                     )         = 115                                                                                   getchar(0xf7fc5320, 0xf7fc3073, 0x786573, 0x646f67)         = 10                                  getchar(0xf7fc5320, 0xf7fc0a73, 0x786573, 0x646f67asdf                                            )         = 97                                                                                    strcmp("s\na""sex")                                       = -1                                  puts("Wrong password, Good Bye ..."Wrong password, Good Bye ...                                   )                        = 29                                                                     +++ exited (status 0) +++ 
+
+strcmp() >>> compares 2 strings. If the 2 are the same then the program spits out the password. It is looking for the word "sex", so that is the password
+
+This brought me into a shell that runs as leviathan2, which allows me to read the leviathan2 password fild
+
+## PW ERJ9jTYWXE
