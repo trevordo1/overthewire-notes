@@ -2,3 +2,5 @@
 
 ## Observations
 theres a command that seems to print a file that I choose. It probably runs with higher permissions than I have. My initial plan was to make it read the leviathan 3 file, but it did not work. I will have to find the command that allows me to see what permissions the command has. 
+
+TEST TEST
