@@ -21,6 +21,11 @@ EXAMPLE: Trevor wants to send ciara message. Trevor sends to ciara ip. Switch ta
 
  CAM table (content addressable memory) --------> a table that shows which source mac address is on each port of the switch
 
+    How does a switch know a devices MAC address before it is added to the CAM table? 
+        ARP: Address resolution protocol
+            Sends out a frame to all of the devices on the switch. It asks each one if their ip address is the one the request is for. 
+            The place that the ARP message is sent is FFFF.FFFF.FFFF which is basically just a way to ask for each port's device's mac address. The devices on the switch all receive the message, they only respond if their mac address is the one that the ARP is asking for
+
 # MAC ADDRESS 
 the address attatched to each individual device
 Never changes even if it switches networks or wifi
